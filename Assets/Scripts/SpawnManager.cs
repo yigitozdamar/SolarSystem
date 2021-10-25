@@ -6,7 +6,6 @@ public class SpawnManager : MonoBehaviour
 {
     //public ObjectPooler meteorPrefab;       // The enemy prefab to be spawned.
     public float spawnTime = 3f;            // How long between each spawn.
-    public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
 
     private Vector3 spawnPos;
     private float randomPosX = 4000f;
@@ -25,9 +24,9 @@ public class SpawnManager : MonoBehaviour
     {
         var meteorPrefab = ObjectPooler.SharedInstance.GetPooledObject();
         meteorPrefab.transform.position = GenerateSpawnPosition();
+        meteorPrefab.SetActive(true);
 
-
-        Instantiate(meteorPrefab, transform.position, transform.rotation);
+        //Instantiate(meteorPrefab, transform.position, transform.rotation);
     }
     private Vector3 GenerateSpawnPosition()
     {

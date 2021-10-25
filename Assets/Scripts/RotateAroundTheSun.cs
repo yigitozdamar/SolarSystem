@@ -11,10 +11,10 @@ public class RotateAroundTheSun : MonoBehaviour
     public float duration = 50;
     void Start()
     {
-
-        Tween t = target.DOPath(waypoints, duration, pathType)
-                        .SetOptions(true).SetLoops(-1);
-        t.SetEase(Ease.Linear).SetLoops(-1, LoopType.Restart);
+      
+       
+        target.DOPath(waypoints, duration, pathType)
+                        .SetOptions(true).SetLoops(-1, LoopType.Restart).SetEase(Ease.Linear);
     }
 
 }
