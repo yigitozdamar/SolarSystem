@@ -10,7 +10,7 @@ public class RotateAroundTheOwnPosition : MonoBehaviour
     void Start()
     {
         Vector3 rotateAxis = new Vector3(0, 360, 0);
-        transform.DORotate(rotateAxis, duration, RotateMode.WorldAxisAdd).SetLoops(-1, LoopType.Restart);
+        transform.DORotate(rotateAxis, duration, RotateMode.WorldAxisAdd).SetLoops(-1, LoopType.Restart).SetEase(Ease.Linear);
         
     }
 }
