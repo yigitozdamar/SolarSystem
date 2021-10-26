@@ -13,8 +13,7 @@ public class DropdownScript : MonoBehaviour
     private List<CinemachineVirtualCamera> camList = new List<CinemachineVirtualCamera>();
 
     
-   
-    public void ButtonClickAction()
+   public void addCamsToAList()
     {
         camList.Add(mainCam);
         camList.Add(mercuryCam);
@@ -26,7 +25,11 @@ public class DropdownScript : MonoBehaviour
         camList.Add(uranusCam);
         camList.Add(neptunCam);
         camList.Add(plutonCam);
+    }
+    public void ButtonClickAction()
+    {
 
+        addCamsToAList();
 
         if (dDownList.value == 0)
         {
